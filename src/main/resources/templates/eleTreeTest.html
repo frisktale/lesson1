@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- <el-button @click="visible = true">Button</el-button>
+    <el-dialog :visible.sync="visible" title="Hello world">
+      <p>Try Element</p>
+    </el-dialog> -->
+    <el-tree :data="treeData" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
+  </div>
+</body>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: function () {
+
+      return {treeData:null,
+        defaultProps: {
+          children: 'childList',
+          label: 'name'
+        }}
+    },
+    mounted() {
+      axios
+        .get('getAllOrg')
+        .then(response => (this.treeData = response.data))
+        .catch(function (error) { // 请求失败处理
+          console.log(error);
+        });
+        
+    },
+    methods: {
+      handleNodeClick(data) {
+        console.log(data);
+      }
+    }
+  })
+</script>
+
+</html>

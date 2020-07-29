@@ -63,3 +63,7 @@ spring:
       filter: 
         stat: 
           log-slow-sql: true
+    
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
