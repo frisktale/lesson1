@@ -13,7 +13,7 @@
     <el-dialog :visible.sync="visible" title="Hello world">
       <p>Try Element</p>
     </el-dialog> -->
-    <el-tree :data="treeData" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
+    <el-tree :data="treeData" @node-contextmenu="rightShow()" :props="defaultProps" @node-click="handleNodeClick"></el-tree>
   </div>
 </body>
 <!-- import Vue before Element -->
@@ -44,6 +44,11 @@
     methods: {
       handleNodeClick(data) {
         console.log(data);
+      },rightShow(event,object,value,element){
+        console.log("右键被点击的event:",event);
+        console.log("右键被点击的object:",object);
+        console.log("右键被点击的value:",value);
+        console.log("右键被点击的element:",element);
       }
     }
   })
