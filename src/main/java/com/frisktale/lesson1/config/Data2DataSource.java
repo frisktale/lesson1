@@ -28,13 +28,13 @@ public class Data2DataSource {
     @Value("${data2.datasource.url}")
     private String url;
 
-    @Value("${data2.datasource.username}")
+    @Value("${spring.datasource.username}")
     private String username;
 
-    @Value("${data2.datasource.password}")
+    @Value("${spring.datasource.password}")
     private String password;
 
-    @Value("${data2.datasource.driver-class-name}")
+    @Value("${spring.datasource.driver-class-name}")
     private String driverClassName;
 
     @Bean("Data2DataSource")

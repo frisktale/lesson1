@@ -32,13 +32,13 @@ public class Data1DataSource {
     @Value("${data1.datasource.url}")
     private String url;
 
-    @Value("${data1.datasource.username}")
+    @Value("${spring.datasource.username}")
     private String username;
 
-    @Value("${data1.datasource.password}")
+    @Value("${spring.datasource.password}")
     private String password;
 
-    @Value("${data1.datasource.driver-class-name}")
+    @Value("${spring.datasource.driver-class-name}")
     private String driverClassName;
 
 

@@ -5,13 +5,13 @@ server:
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: password
     druid:
       # 数据库访问配置, 使用druid数据源
     #   type: com.alibaba.druid.pool.DruidDataSource
 #      url: jdbc:postgresql://127.0.0.1:5432/DBTest
-#      driver-class-name: org.postgresql.Driver
-#      username: postgres
-#      password: password
       # 连接池配置
       initial-size: 5
       min-idle: 5
@@ -69,13 +69,13 @@ spring:
     suffix: .html
 data1:
   datasource:
-    username: postgres
-    password: password
+#    username: postgres
+#    password: password
+#    driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://127.0.0.1:5432/DBTest
-    driver-class-name: org.postgresql.Driver
 data2:
   datasource:
-    username: postgres
-    password: password
+#    username: postgres
+#    password: password
+#    driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://127.0.0.1:5432/DBTest2
-    driver-class-name: org.postgresql.Driver
