@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ViewController{
 
     @RequestMapping("Tree")
-    public String TreeView(){
+    public String treeView(){
         System.out.println("into Tree");
         return "eleTreeTest";
     }

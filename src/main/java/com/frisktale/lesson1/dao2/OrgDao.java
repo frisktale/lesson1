@@ -1,14 +1,13 @@
-package com.frisktale.lesson1.dao;
-
-import java.util.List;
+package com.frisktale.lesson1.dao2;
 
 import com.frisktale.lesson1.entity.Org;
-
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Component;
 
-@Component
+import java.util.List;
+
+@Component("OrgDao2")
 @Mapper
 public interface OrgDao {
     

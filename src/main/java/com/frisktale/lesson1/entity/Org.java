@@ -4,6 +4,8 @@ import java.util.List;
 
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 @Data
 public class Org implements DataTree<Org> {
@@ -15,5 +17,4 @@ public class Org implements DataTree<Org> {
 
     private List<Org> childList;
 
-    
 }
